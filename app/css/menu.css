@@ -1,0 +1,46 @@
+.mobile-menu{
+	position: fixed;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    z-index: 800;
+}
+.mobile-menu-background{
+	background: rgba(0,0,0,0);
+	-webkit-transition: background 0.3s;
+	transition: background 0.3s;
+}
+.mobile-menu-content{
+	height: 100vh;
+    width: 80%;
+    background: #fff;
+    overflow: auto;
+    box-shadow: 0 0 25px #000000a8;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.mobile-menu-body{
+	padding: 0px;
+	height: 100vh;
+}
+.mobile-menu.open{
+	left: 0;
+}
+.mobile-menu.open .mobile-menu-background{
+	background: rgba(0,0,0,0.6);
+}
+.mobile-menu.open .mobile-menu-content{
+	-webkit-transform: translateX(0%);
+	        transform: translateX(0%);
+}
+
+.mobile-menu.close .mobile-menu-background{
+	background: rgba(0,0,0,0);
+}
+.mobile-menu.close .mobile-menu-content{
+	-webkit-transform: translateX(-100%);
+	        transform: translateX(-100%);
+}
