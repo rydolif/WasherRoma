@@ -98,8 +98,8 @@
 								src="img/phone.png" alt=""><span>+38 (097) 123-45-67</span></a>
 						<!-- Elements-button-phone end -->
 						<div class="head-word">
-							<!-- Elements-button-call-mobile start --><a class="btn btn-call-mobile"
-								href="https://вашсайт.ком/#callbackwidget">Передзвоніть мені</a>
+							<!-- Elements-button-call-mobile start --><a class="btn callBack btn-call-mobile callBack"
+								href="#">Передзвоніть мені</a>
 							<!-- Elements-button-call-mobile end -->
 						</div>
 						<div class="head-work">
@@ -114,8 +114,8 @@
 				<!-- Header-buttons start -->
 				<div class="head-buttons wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
 					<!-- Elements-button-call start -->
-					<!-- Elements-button-viber start --><a class="btn btn-call-mobile"
-						href="https://вашсайт.ком/#callbackwidget">Передзвоніть мені</a>
+					<!-- Elements-button-viber start --><a href="#" class="btn btn-call-mobile callBack"
+						>Передзвоніть мені</a>
 					<!-- Elements-button-viber end --><a class="btn btn-phone" href="tel:+380971234567"><img src="img/phone.png"
 							alt=""><span>+38 (097) 123-45-67</span></a>
 				</div>
@@ -170,8 +170,8 @@
 								<!--  </div> -->
 								<!-- Elements-form end -->
 								<div class="head-fast-form-button">
-									<!-- Form-submit start --><a class="btn btn-arrow feedback"
-										href="https://вашсайт.ком/#callbackwidget">Замовити дзвінок</a>
+									<!-- Form-submit start --><a class="btn btn-arrow feedback callBack"
+										href="#">Замовити дзвінок</a>
 									<!-- Form-submit end -->
 								</div>
 							</form>
@@ -277,8 +277,8 @@
 						style="visibility: hidden; animation-delay: 0.6s; animation-name: none;">
 						<!-- Elements-button-viber start <a class="btn btn-app btn-viber" href="viber://pa?chatURI=вашчат">Заказать в viber</a>-->
 						<!-- Elements-button-viber end -->
-						<!-- Elements-button-Telegram start --><a class="btn btn-app btn-call"
-							href="https://вашсайт.ком/#callbackwidget">Замовити дзвінок!</a>
+						<!-- Elements-button-Telegram start --><a class="btn btn-app btn-call callBack"
+							href="#">Замовити дзвінок!</a>
 						<!-- Elements-button-Telegram end -->
 					</div>
 				</div>
@@ -475,8 +475,8 @@
 				</div>
 				<!-- Elements-form end -->
 				<div class="call-two-button">
-					<!-- Form-submit start --><a class="btn btn-arrow feedback"
-						href="https://вашсайт.ком/#callbackwidget">Замовити дзвінок</a>
+					<!-- Form-submit start --><a class="btn btn-arrow feedback callBack"
+						href="#">Замовити дзвінок</a>
 					<!-- Form-submit end -->
 				</div>
 			</form>
@@ -817,7 +817,7 @@
 						<p class="discount-have wow fadeInUp" data-wow-delay="0.30000000000000004s"
 							style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">Скористайтеся допомогою
 							досвідчених майстрів компанії прямо зараз, та отримаєте бажану знижку в розмірі 10%! Чекаємо заявок!
-						</p><a class="btn btn-arrow wow fadeInUp" href="https://вашсайт.ком/#callbackwidget" data-wow-delay="0.4s"
+						</p><a class="btn btn-arrow wow fadeInUp callBack" href="#" data-wow-delay="0.4s"
 							style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">Відправити заявку</a>
 					</div>
 				</div>
@@ -853,8 +853,8 @@
 								src="img/phone.png" alt=""><span>+38 (097) 123-45-67</span></a>
 						<!-- Elements-button-phone end -->
 						<div class="foot-tie">
-							<!-- Elements-button-call-mobile start --><a class="btn btn-call-mobile"
-								href="https://вашсайт.ком/#callbackwidget">Передзвоніть мені</a>
+							<!-- Elements-button-call-mobile start --><a class="btn btn-call-mobile callBack"
+								href="#">Передзвоніть мені</a>
 							<!-- Elements-button-call-mobile end -->
 						</div>
 					</div>
@@ -869,7 +869,54 @@
 			</div>
 		</div>
 	</div>
+
 	<!-- Footer-section end -->
+	<div class="modal" id="callBack">
+		<form action="#" class="modal__form form" method="POST">
+
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<h3 class="form__title">Передзвоніть мені</h3>
+
+			<input type="hidden" name="subject" value="Передзвоніть мені">
+
+			<div class="form__item">
+				<label for="formName" class="form__label">Имя*</label>
+				<input id="formName" type="text" name="name" placeholder="Имя" class="form__input _req">
+			</div>
+
+			<div class="form__item">
+				<label for="formPhone" class="form__label">Телефон*</label>
+				<input id="formPhone" type="tel" name="phone" placeholder="Телефон" class="form__input _req">
+			</div>
+
+			<div class="form__item">
+				<label for="formMail" class="form__label">Почта*</label>
+				<input id="formMail" type="email" name="mail" placeholder="Почта" class="form__input _req">
+			</div>
+
+			<div class="form__btn">
+				<button type="submit" class="btn form__btn_button" name="submit">Отправить</button>
+			</div>
+
+		</form>
+	</div>
+
+	<div class="modal" id="modal__thanks">
+		<div class="modal__form modal__thanks">
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<h3>Спасибо за доверие!</h3>
+			<p>Мы обязательно с вами свяжемся!</p>
+		</div>
+
+	</div>
 
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -881,6 +928,7 @@
 	<script src="js/jquery.inputmask.js"></script>
 	<script src="js/jquery.fancybox.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="js/app.min.js"></script>
 
 </body>
 

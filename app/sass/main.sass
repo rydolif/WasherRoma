@@ -4,6 +4,90 @@ $accent: #4cddee
 $text: #353535
 $dark: #1e53a6
 
+
+//----------------------+r(1200)----------------------
+=r($width)
+	@media only screen and (max-width: $width+ "px")
+		@content
+
+=rmin($width)
+	@media only screen and (min-width: $width+ "px")
+		@content
+
+=rh($height)
+	@media only screen and (max-height: $height + "px")
+		@content
+
+=rhmin($height)
+	@media only screen and (min-height: $height + "px")
+		@content
+
+
+//----------------------+pseudo----------------------
+%pseudo
+	position: relative
+
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+
+=pseudo
+	@extend %pseudo
+
+//-------------------background---+cover---------------
+=cover
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+//----------------------+absolute----------------------
+=absolute
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+
+//----------------------+rotate----------------------
+=rotate($var)
+	transform: rotate($var+deg)
+
+//----------------------+scale----------------------
+=scale($var)
+	transform: scale($var)
+
+//----------------------+transition----------------------
+=transition
+	transition: all .6s
+	// transition-timing-function: ease-out
+
+//----------------------+between----------------------
+=between
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: space-between
+
+//----------------------+around----------------------
+=around
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: space-around
+
+//----------------------+last----------------------
+%last
+	&:last-child
+		margin-bottom: 0
+
+=last
+	@extend %last
+
+
+
+
 // -----MODAL-----
 .modal
 	display: flex
@@ -21,7 +105,7 @@ $dark: #1e53a6
 	background-color: rgba(#1a1a1d, .7)
 	overflow: auto
 	padding: 40px 0
-	+transition
+	transition: all .6s
 
 	&.active
 		opacity: 1
@@ -83,7 +167,7 @@ $dark: #1e53a6
 		border: 1px solid #8d8d8e
 		margin: auto
 		transform: translate(0, -150px)
-		+transition
+		transition: all .6s
 
 		&::after
 			border-radius: 20px
@@ -119,7 +203,7 @@ $dark: #1e53a6
 		visibility: hidden
 		opacity: 0
 		z-index: 100
-		+transition
+		transition: all .6s
 
 	&._sending
 
@@ -132,6 +216,7 @@ $dark: #1e53a6
 		margin-bottom: 15px
 
 	&__label
+		display: inline-block
 		font-size: 16px
 		font-weight: 500
 		margin-bottom: 5px
@@ -141,6 +226,8 @@ $dark: #1e53a6
 		height: 40px
 		line-height: 40px
 		padding: 0 15px
+		border: 3px solid #0095ff
+		border-radius: 5px
 
 		&::placeholder
 			line-height: 40px
@@ -191,7 +278,7 @@ $dark: #1e53a6
 				border-radius: 50%
 				background-color: #fff
 				transform: scale(0)
-				+transition
+				transition: all .6s
 
 		&_input
 			display: none
@@ -261,7 +348,7 @@ $dark: #1e53a6
 				background-color: $dark
 				border-radius: 4px
 				margin-right: 10px
-				+transition
+				transition: all .6s
 
 			&::after
 				content: ''
@@ -272,7 +359,7 @@ $dark: #1e53a6
 				left: 4px
 				background-color: #fff
 				transform: scale(0)
-				+transition
+				transition: all .6s
 
 			a
 				color: $text
@@ -303,7 +390,7 @@ $dark: #1e53a6
 			border: 0
 			position: relative
 			top: 0
-			+transition
+			transition: all .6s
 
 			&:hover
 				background-color: $accent

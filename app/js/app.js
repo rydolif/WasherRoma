@@ -11,27 +11,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
 				modal.forEach(item => {
 					const wrap = item.id;
-					const link = document.querySelector('.' + wrap);
-					let close = item.querySelector('.close');
-					if (link) {
-						link.addEventListener('click', (e) => {
-							if (e.target) {
-								e.preventDefault();
+					const link = document.querySelectorAll('.' + wrap);
+
+					link.forEach(linkItem => {
+						let close = item.querySelector('.close');
+							if (linkItem) {
+								linkItem.addEventListener('click', (e) => {
+									if (e.target) {
+										e.preventDefault();
+									}
+									item.classList.add('active');
+								});
 							}
-							item.classList.add('active');
-						});
-					}
 
-					if (close) {
-						close.addEventListener('click', () => {
-							item.classList.remove('active');
-						});
-					}
+							if (close) {
+								close.addEventListener('click', () => {
+									item.classList.remove('active');
+								});
+							}
 
-					item.addEventListener('click', (e) => {
-						if (e.target === item) {
-							item.classList.remove('active');
-						}
+						item.addEventListener('click', (e) => {
+							if (e.target === item) {
+								item.classList.remove('active');
+							}
+						});
 					});
 				});
 			}
